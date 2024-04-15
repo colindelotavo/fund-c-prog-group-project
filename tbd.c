@@ -14,11 +14,15 @@
 
 /******************************************************************************
 
- * List header files - do NOT use any other header files. Note that stdlib.h is
-   included in case you want to use any of the functions in there. However the
-   task can be achieved with stdio.h and string.h only.
+ * Header files along with used functions
 
 ******************************************************************************/
+
+/* These are the only ones we're allowed ot use */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
 
 /******************************************************************************
 
@@ -31,5 +35,28 @@
 
  * Function prototypes - do NOT change the given prototypes. However you may
    define your own functions if required.
+
+******************************************************************************/
+
+/******************************************************************************
+
+ * Overview of program here
+
+******************************************************************************/
+
+int main() {
+
+}
+
+/******************************************************************************
+
+ * Compression Algorithm Section
+
+******************************************************************************/
+
+
+/******************************************************************************
+
+ * Encryption Algorithm Section
 
 ******************************************************************************/
