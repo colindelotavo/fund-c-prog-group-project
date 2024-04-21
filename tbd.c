@@ -33,10 +33,21 @@
 
 /******************************************************************************
 
- * Function prototypes - do NOT change the given prototypes. However you may
-   define your own functions if required.
+ * Function prototypes
 
 ******************************************************************************/
+
+void run_length_compress(const char input_filename[], 
+                         const char output_filename[]);
+
+void run_length_decompress(const char input_filename[], 
+                           const char output_filename[]);
+
+void caeser_cipher_encrypt(const char input_filename[], 
+                           const char output_filename[], int shift_key);
+
+void caeser_cipher_decrypt(const char input_filename[], 
+                           const char output_filename[], int shift_key);
 
 /******************************************************************************
 
@@ -44,8 +55,8 @@
 
 ******************************************************************************/
 
-int main() {
-
+int main(void) {
+    return 0;
 }
 
 /******************************************************************************
@@ -54,9 +65,41 @@ int main() {
 
 ******************************************************************************/
 
+void run_length_compress(const char input_filename[], 
+                         const char output_filename[]) {
+
+}
+
+
+/******************************************************************************
+
+ * Decompression Algorithm Section
+
+******************************************************************************/
+
+void run_length_decompress(const char input_filename[], 
+                           const char output_filename[]) {
+        
+}
 
 /******************************************************************************
 
  * Encryption Algorithm Section
 
 ******************************************************************************/
+
+void caeser_cipher_encrypt(const char input_filename[], 
+                           const char output_filename[], int shift_key) {
+
+}
+
+/******************************************************************************
+
+ * Decryption Algorithm Section
+
+******************************************************************************/
+
+void caeser_cipher_decrypt(const char input_filename[], 
+                           const char output_filename[], int shift_key) {
+
+}
