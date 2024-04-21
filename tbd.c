@@ -18,7 +18,7 @@
 
 ******************************************************************************/
 
-/* These are the only ones we're allowed ot use */
+/* These are the only ones we're allowed to use */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,6 +48,8 @@ void caeser_cipher_encrypt(const char input_filename[],
 
 void caeser_cipher_decrypt(const char input_filename[], 
                            const char output_filename[], int shift_key);
+
+/* Should we create potential helper functions like save_file / load_file? */
 
 /******************************************************************************
 
