@@ -1,6 +1,6 @@
 # Compiler and compiler flags
 CC = gcc
-CFLAGS = -Wall -g
+CFLAGS = -Wall -Werror -ansi -lm
 
 # Target executable
 TARGET = encryption_program
