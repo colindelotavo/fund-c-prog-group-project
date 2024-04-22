@@ -1,6 +1,6 @@
-# Compiler and compiler flags
+# makefile for generating edu_cybersec_tool.out
 CC = gcc
-CFLAGS = -Wall -g
+CFLAGS = -Wall -Werror -ansi -lm
 
 # Target executable
 TARGET = my_program
