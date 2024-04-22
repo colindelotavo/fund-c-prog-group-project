@@ -23,6 +23,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "caeser_cipher.h"
+#include "run_length.h"
 
 /******************************************************************************
 
