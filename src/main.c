@@ -54,28 +54,14 @@ void print_menu(void);
 ******************************************************************************/
 
 int main(void) {
-
-    // /* Original File */
-    // const char *input_filename = "path/to/your/inputfile.txt";
-
-    // /* Files for Compression Operations */
-    // const char *compressed_file = "path/to/your/outputfile.txt";
-    // const char *decompressed_file = "path/to/your/outputfile.txt";
-
-    // /* Files for Encryption Operations */
-    // const char *encrypt_file = "path/to/your/outputfile.txt";
-    // const char *decrypt_file = "path/to/your/outputfile.txt";
-
-    // encrypt_file(
-
+    
     int choice = 0;
 
     while (choice != 5) {
         print_menu();
         scanf(" %d", &choice); getchar();
         if (choice == 1) {
-            // compress
-            break;
+            compress_file(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
             // decompress
             break;
