@@ -23,8 +23,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "compression.h"
-#include "encryption.h"
+#include "../include/compression.h"
+#include "../include/encryption.h"
 
 /******************************************************************************
 
@@ -33,25 +33,19 @@
 
 ******************************************************************************/
 
+#define INPUT_FILE "../data/input_file.txt"
+#define COMPRESSED_FILE "../data/compressed_file.cmp"
+#define DECOMPRESSED_FILE "../data/decompressed_file.txt"
+#define ENCRYPTED_FILE "../data/encrypted_file.enc"
+#define DECRYPTED_FILE "../data/decrypted_file.txt"
+
 /******************************************************************************
 
  * Function prototypes
 
 ******************************************************************************/
 
-void run_length_compress(const char input_filename[], 
-                         const char output_filename[]);
-
-void run_length_decompress(const char input_filename[], 
-                           const char output_filename[]);
-
-void caeser_cipher_encrypt(const char input_filename[], 
-                           const char output_filename[], int shift_key);
-
-void caeser_cipher_decrypt(const char input_filename[], 
-                           const char output_filename[], int shift_key);
-
-/* Should we create potential helper functions like save_file / load_file? */
+void print_menu(void);
 
 /******************************************************************************
 
@@ -60,5 +54,66 @@ void caeser_cipher_decrypt(const char input_filename[],
 ******************************************************************************/
 
 int main(void) {
+
+    // /* Original File */
+    // const char *input_filename = "path/to/your/inputfile.txt";
+
+    // /* Files for Compression Operations */
+    // const char *compressed_file = "path/to/your/outputfile.txt";
+    // const char *decompressed_file = "path/to/your/outputfile.txt";
+
+    // /* Files for Encryption Operations */
+    // const char *encrypt_file = "path/to/your/outputfile.txt";
+    // const char *decrypt_file = "path/to/your/outputfile.txt";
+
+    // encrypt_file(
+
+    int choice = 0;
+
+    while (choice != 5) {
+        print_menu();
+        scanf(" %d", &choice); getchar();
+        if (choice == 1) {
+            // compress
+            break;
+        } else if (choice == 2) {
+            // decompress
+            break;
+        } else if (choice == 3) {
+            // encrypt
+            break;
+        } else if (choice == 4) {
+            // decrypt
+            break;
+        } else if (choice == 5) {
+            // exit
+            break;
+        } else {
+            printf("Invalid choice.\n");
+        }
+    }
     return 0;
+}
+
+/******************************************************************************
+ 
+ * This function prints the menu options with instructions on how to use
+   the simple compression and encryption tool.
+
+ * inputs:
+   - none
+
+ * outputs:
+   - Prints menu options to user
+
+******************************************************************************/
+
+void print_menu(void) {
+    printf("\nCompression and Encryption Tooling - Menu\n"
+        "1. Compress File Contents\n"
+        "2. Decompress File Contents\n"
+        "3. Encrypt File Contents\n"
+        "4. Decrypt File Contents\n"
+        "5. Exit the program\n"
+        "Enter your choice>\n");
 }
