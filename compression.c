@@ -1,4 +1,4 @@
-#define "run_length.h"
+#include "compression.h"
 
 /* defining functions here */
 void run_length_compress(const char input_filename[], 

@@ -1,4 +1,4 @@
-#include "caeser_cipher.h"
+#include "encryption.h"
 
 /* defining functions here */
 void caeser_cipher_encrypt(const char input_filename[], 

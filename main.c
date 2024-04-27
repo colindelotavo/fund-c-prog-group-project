@@ -23,8 +23,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "caeser_cipher.h"
-#include "run_length.h"
+#include "compression.h"
+#include "encryption.h"
 
 /******************************************************************************
 
@@ -61,49 +61,4 @@ void caeser_cipher_decrypt(const char input_filename[],
 
 int main(void) {
     return 0;
-}
-
-/******************************************************************************
-
- * Compression Algorithm Section
-
-******************************************************************************/
-
-void run_length_compress(const char input_filename[], 
-                         const char output_filename[]) {
-
-}
-
-
-/******************************************************************************
-
- * Decompression Algorithm Section
-
-******************************************************************************/
-
-void run_length_decompress(const char input_filename[], 
-                           const char output_filename[]) {
-        
-}
-
-/******************************************************************************
-
- * Encryption Algorithm Section
-
-******************************************************************************/
-
-void caeser_cipher_encrypt(const char input_filename[], 
-                           const char output_filename[], int shift_key) {
-
-}
-
-/******************************************************************************
-
- * Decryption Algorithm Section
-
-******************************************************************************/
-
-void caeser_cipher_decrypt(const char input_filename[], 
-                           const char output_filename[], int shift_key) {
-
 }
