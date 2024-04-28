@@ -6,12 +6,10 @@
  * What function does (e.g. using run-length encoding etc)
 
  * inputs:
-   - a
-   - b
+   -
 
  * outputs:
-   - y
-   - z
+   - 
 
 steps to run as a test:
 cd src
@@ -77,12 +75,10 @@ void compress_file(const char input_filename[],
  * What function does (e.g. using run-length encoding etc)
 
  * inputs:
-   - a
-   - b
+   - 
 
  * outputs:
-   - y
-   - z
+   - 
 
 steps to run as a test:
 cd src
