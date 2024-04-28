@@ -63,16 +63,15 @@ int main(void) {
         if (choice == 1) {
             compress_file(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
-            // decompress
-            break;
+            decompress_file(INPUT_FILE, DECOMPRESSED_FILE);
         } else if (choice == 3) {
-            // encrypt
+            /* encrypt */
             break;
         } else if (choice == 4) {
-            // decrypt
+            /* decrypt */
             break;
         } else if (choice == 5) {
-            // exit
+            /* exit */
             break;
         } else {
             printf("Invalid choice.\n");
