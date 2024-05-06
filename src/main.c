@@ -67,13 +67,13 @@ int main(void) {
         } else if (choice == 3) {
             int shift_key;
             printf("Enter shift key for encryption: ");
-            scanf("%d", &shift_key);
+            scanf(" %d", &shift_key);
             encrypt_file(INPUT_FILE, ENCRYPTED_FILE, shift_key);
             printf("Encryption complete.\n");
         } else if (choice == 4) {
             int shift_key;
             printf("Enter shift key for decryption: ");
-            scanf("%d", &shift_key);
+            scanf(" %d", &shift_key);
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);
             printf("Decryption complete.\n");
         } else if (choice == 5) {
