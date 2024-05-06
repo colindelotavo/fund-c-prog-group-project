@@ -1,5 +1,5 @@
-#ifndef RUN_LENGTH_H_   /* Include guard */
-#define RUN_LENGTH_H_
+#ifndef COMPRESSION_H_   /* Include guard */
+#define COMPRESSION_H_
 
 /******************************************************************************
 

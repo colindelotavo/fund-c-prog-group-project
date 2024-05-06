@@ -1,5 +1,5 @@
-#ifndef CAESER_CIPHER_H_   /* Include guard */
-#define CAESER_CIPHER_H_
+#ifndef ENCRYPTION_H_   /* Include guard */
+#define ENCRYPTION_H_
 
 /******************************************************************************
 
