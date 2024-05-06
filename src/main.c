@@ -62,19 +62,25 @@ int main(void) {
         scanf(" %d", &choice); getchar();
         if (choice == 1) {
             compress_file(INPUT_FILE, COMPRESSED_FILE);
+            /* Output file contents of compressed_file function*/
+            printf("Compression complete.\n");
         } else if (choice == 2) {
             decompress_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
+            /* Output file contents of decompressed_file function*/
+            printf("Decompression complete.\n");
         } else if (choice == 3) {
             int shift_key;
             printf("Enter shift key for encryption: ");
             scanf(" %d", &shift_key);
             encrypt_file(INPUT_FILE, ENCRYPTED_FILE, shift_key);
+            /* Output file contents of encrypted_file function*/
             printf("Encryption complete.\n");
         } else if (choice == 4) {
             int shift_key;
             printf("Enter shift key for decryption: ");
             scanf(" %d", &shift_key);
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);
+            /* Output file contents of decrypted_file function*/
             printf("Decryption complete.\n");
         } else if (choice == 5) {
             /* exit */
