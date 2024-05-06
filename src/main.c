@@ -71,14 +71,14 @@ int main(void) {
             printf("Decompression complete.\n");
         } else if (choice == 3) {
             int shift_key;
-            printf("Enter shift key for encryption: ");
+            printf("Enter shift key for encryption> ");
             scanf(" %d", &shift_key);
             encrypt_file(INPUT_FILE, ENCRYPTED_FILE, shift_key);
             /* display_file(INPUT_FILE, ENCRYPTED_FILE) */
             printf("Encryption complete.\n");
         } else if (choice == 4) {
             int shift_key;
-            printf("Enter shift key for decryption: ");
+            printf("Enter shift key for decryption> ");
             scanf(" %d", &shift_key);
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);
             /* display_file(ENCRYPTED_FILE, DECRYPTED_FILE) */
