@@ -18,7 +18,20 @@
 
 ******************************************************************************/
 
-/* prints file contents of input file to console */
-void display_file(const char input_filename[]) {
+/* prints:
+
+BEFORE
+-------------------------------------------------------------------------------
+
+<input_file contents>
+
+
+AFTER
+-------------------------------------------------------------------------------
+<output_file contents>
+
+file contents of input file to console */
+void display_file(const char input_filename[], 
+                  const char output_filename[]); {
                 
     }

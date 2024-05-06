@@ -8,9 +8,9 @@
 ******************************************************************************/
 
 void compress_file(const char input_filename[], 
-                         const char output_filename[]);
+                   const char output_filename[]);
 
 void decompress_file(const char input_filename[], 
-                           const char output_filename[]);
+                     const char output_filename[]);
 
 #endif // RUN_LENGTH_H_
