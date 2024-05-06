@@ -63,7 +63,7 @@ int main(void) {
         if (choice == 1) {
             compress_file(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
-            decompress_file(INPUT_FILE, DECOMPRESSED_FILE);
+            decompress_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
         } else if (choice == 3) {
             int shift_key;
             printf("Enter shift key for encryption: ");
