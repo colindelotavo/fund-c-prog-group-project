@@ -32,6 +32,6 @@ AFTER
 
 file contents of input file to console */
 void display_file(const char input_filename[], 
-                  const char output_filename[]); {
+                  const char output_filename[]) {
                 
     }

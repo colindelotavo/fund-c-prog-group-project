@@ -16,7 +16,7 @@
 
 steps to run as a test:
 cd src
-gcc -o ../task.out main.c compression.c -I../include
+gcc -o ../task.out main.c compression.c encryption.c display_file.c -I../include
 ../task.out
 
  * edge cases to handle
