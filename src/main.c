@@ -63,26 +63,22 @@ int main(void) {
         scanf(" %d", &choice); getchar();
         if (choice == 1) {
             compress_file(INPUT_FILE, COMPRESSED_FILE);
-            /* display_file(INPUT_FILE, COMPRESSED_FILE) */
-            printf("Compression complete.\n");
+            display_file(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
             decompress_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
-            /* display_file(COMPRESSED_FILE, DECOMPRESSED_FILE) */
-            printf("Decompression complete.\n");
+            display_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
         } else if (choice == 3) {
             int shift_key;
             printf("Enter shift key for encryption> ");
             scanf(" %d", &shift_key);
             encrypt_file(INPUT_FILE, ENCRYPTED_FILE, shift_key);
-            /* display_file(INPUT_FILE, ENCRYPTED_FILE) */
-            printf("Encryption complete.\n");
+            display_file(INPUT_FILE, ENCRYPTED_FILE);
         } else if (choice == 4) {
             int shift_key;
             printf("Enter shift key for decryption> ");
             scanf(" %d", &shift_key);
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);
-            /* display_file(ENCRYPTED_FILE, DECRYPTED_FILE) */
-            printf("Decryption complete.\n");
+            display_file(ENCRYPTED_FILE, DECRYPTED_FILE);
         } else if (choice == 5) {
             /* exit */
             break;
@@ -107,7 +103,7 @@ int main(void) {
 ******************************************************************************/
 
 void print_menu(void) {
-    printf("\nCompression and Encryption Tooling - Menu\n"
+    printf("\n\nCompression and Encryption Tooling - Menu\n"
         "1. Compress File Contents\n"
         "2. Decompress File Contents\n"
         "3. Encrypt File Contents\n"
