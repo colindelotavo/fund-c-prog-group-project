@@ -47,6 +47,7 @@
 ******************************************************************************/
 
 void print_menu(void);
+void exit_program(void);
 
 /******************************************************************************
 
@@ -85,8 +86,7 @@ int main(void) {
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);
             display_file(ENCRYPTED_FILE, DECRYPTED_FILE);
         } else if (choice == 5) {
-            /* exit */
-            break;
+            exit_program();
         } else {
             printf("Invalid choice.\n");
         }
@@ -109,10 +109,14 @@ int main(void) {
 
 void print_menu(void) {
     printf("\n\nCompression and Encryption Tooling - Menu\n"
-        "1. Compress File Contents\n"
-        "2. Decompress File Contents\n"
-        "3. Encrypt File Contents\n"
-        "4. Decrypt File Contents\n"
-        "5. Exit the program\n"
+        "1 - Compress File Contents\n"
+        "2 - Decompress File Contents\n"
+        "3 - Encrypt File Contents\n"
+        "4 - Decrypt File Contents\n"
+        "5 - Exit the program\n"
         "Enter your choice> ");
+}
+
+void exit_program(void) {
+    printf("Thanks for learning with us. Have a great day!\n\n");
 }
