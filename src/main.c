@@ -25,7 +25,7 @@
 #include <math.h>
 #include "../include/compression.h"
 #include "../include/encryption.h"
-#include "../include/display_file.h"
+#include "../include/fileio.h"
 
 /******************************************************************************
 
