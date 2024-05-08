@@ -52,29 +52,34 @@ void print_menu(void);
 
  * Overview of program here
 
+    gcc -o ../task.out main.c compression.c encryption.c fileio.c -I../include
+
 ******************************************************************************/
 
 int main(void) {
     
     int choice = 0;
+    int shift_key; /* note in report users would go through all options */
 
     while (choice != 5) {
         print_menu();
         scanf(" %d", &choice); getchar();
         if (choice == 1) {
+            // user_input(INPUT_FILE);
             compress_file(INPUT_FILE, COMPRESSED_FILE);
             display_file(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
+            // user_input(INPUT_FILE);
             decompress_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
             display_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
         } else if (choice == 3) {
-            int shift_key;
+            // user_input(INPUT_FILE);
             printf("Enter shift key for encryption> ");
             scanf(" %d", &shift_key);
             encrypt_file(INPUT_FILE, ENCRYPTED_FILE, shift_key);
             display_file(INPUT_FILE, ENCRYPTED_FILE);
         } else if (choice == 4) {
-            int shift_key;
+            // user_input(INPUT_FILE);
             printf("Enter shift key for decryption> ");
             scanf(" %d", &shift_key);
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);
@@ -109,5 +114,5 @@ void print_menu(void) {
         "3. Encrypt File Contents\n"
         "4. Decrypt File Contents\n"
         "5. Exit the program\n"
-        "Enter your choice>\n");
+        "Enter your choice> ");
 }

@@ -9,28 +9,36 @@
  * What function does (e.g. using caeser cipher etc)
 
  * inputs:
+
+ * outputs:
+
+******************************************************************************/
+
+void user_input(const char input_filename[]) {
+
+}
+
+/******************************************************************************
+
+ * What function does (e.g. using caeser cipher etc)
+
+ * inputs:
    - a
    - b
 
  * outputs:
-   - y
-   - z
+
+    BEFORE
+    -------------------------------------------------------------------------------
+    <input_file contents>
+
+
+    AFTER
+    -------------------------------------------------------------------------------
+    <output_file contents>
 
 ******************************************************************************/
 
-/* prints:
-
-BEFORE
--------------------------------------------------------------------------------
-
-<input_file contents>
-
-
-AFTER
--------------------------------------------------------------------------------
-<output_file contents>
-
-file contents of input file to console */
 void display_file(const char input_filename[], 
                   const char output_filename[]) {
 
@@ -66,3 +74,4 @@ void display_file(const char input_filename[],
     fclose(output_file_ptr);
 
 }
+
