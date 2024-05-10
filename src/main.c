@@ -70,7 +70,6 @@ int main(void) {
             compress_file(INPUT_FILE, COMPRESSED_FILE);
             display_file(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
-            user_input(INPUT_FILE);
             decompress_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
             display_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
         } else if (choice == 3) {
@@ -80,7 +79,6 @@ int main(void) {
             encrypt_file(INPUT_FILE, ENCRYPTED_FILE, shift_key);
             display_file(INPUT_FILE, ENCRYPTED_FILE);
         } else if (choice == 4) {
-            user_input(INPUT_FILE);
             printf("Enter shift key for decryption> ");
             scanf(" %d", &shift_key);
             decrypt_file(ENCRYPTED_FILE, DECRYPTED_FILE, shift_key);

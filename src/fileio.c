@@ -14,8 +14,30 @@
 
 ******************************************************************************/
 
-void user_input(const char input_filename[]) {
+/* Loops BEFORE/AFTER after first selection of options 1-4...? */
 
+void user_input(const char input_filename[]) {
+    size_t str_length;
+    char buffer[256];
+    FILE *input_file_ptr = fopen(input_filename, "wb");
+    
+    if (input_file_ptr == NULL) {
+        fprintf(stderr, "Error opening file.\n");
+        exit(1);
+    }
+
+    printf("Enter text to write to the file: ");
+    fgets(buffer, sizeof(buffer), stdin); 
+
+    str_length = strlen(buffer);
+    if (str_length > 0 && buffer[str_length - 1] == '\n') {
+        buffer[str_length - 1] = '\0';
+    }
+
+    fprintf(input_file_ptr, "%s", buffer);
+
+    fclose(input_file_ptr);
+    printf("Data written successfully.\n");
 }
 
 /******************************************************************************
