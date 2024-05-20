@@ -15,8 +15,11 @@
    - 
 
 steps to run as a test:
+
 cd src
-gcc -o ../task.out main.c compression.c encryption.c display_file.c -I../include
+
+gcc -o ../task.out main.c compression.c encryption.c fileio.c -I../include
+
 ../task.out
 
  * edge cases to handle
@@ -125,4 +128,54 @@ void decompress_file(const char input_filename[],
     fclose(input_file_ptr);
     fclose(output_file_ptr);
     
+}
+
+/******************************************************************************
+
+ * What function does (e.g. using run-length encoding etc)
+
+ * inputs:
+   -
+
+ * outputs:
+   - 
+
+******************************************************************************/
+
+void compare_file_size(const char input_filename[],
+                          const char output_filename[]) {
+
+    FILE *input_file_ptr = fopen(input_filename, "rb");
+    FILE *output_file_ptr = fopen(output_filename, "rb");
+
+    if (!input_file_ptr) {
+        fprintf(stderr, "Error opening input file: %s\n", input_filename);
+        return;
+    }
+    if (!output_file_ptr) {
+        fprintf(stderr, "Error opening output file: %s\n", output_filename);
+        fclose(input_file_ptr);
+        return;
+    }
+
+    int input_length = 0;
+    int output_length = 0;
+    char ch;
+
+    while ((ch = fgetc(input_file_ptr)) != EOF) {
+        input_length++;
+    }
+
+    while ((ch = fgetc(output_file_ptr)) != EOF) {
+        output_length++;
+    }
+
+    if (output_length <= input_length) {
+        printf("\n\n\nCompression is successful.\n");
+    } else {
+        printf("\n\n\nCompression has failed.\n");
+    }
+
+    fclose(input_file_ptr);
+    fclose(output_file_ptr);
 }

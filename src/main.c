@@ -69,6 +69,7 @@ int main(void) {
             user_input(INPUT_FILE);
             compress_file(INPUT_FILE, COMPRESSED_FILE);
             display_file(INPUT_FILE, COMPRESSED_FILE);
+            compare_file_size(INPUT_FILE, COMPRESSED_FILE);
         } else if (choice == 2) {
             decompress_file(COMPRESSED_FILE, DECOMPRESSED_FILE);
             display_file(COMPRESSED_FILE, DECOMPRESSED_FILE);

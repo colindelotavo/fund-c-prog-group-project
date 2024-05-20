@@ -64,8 +64,8 @@ void user_input(const char input_filename[]) {
 void display_file(const char input_filename[], 
                   const char output_filename[]) {
 
-    FILE *input_file_ptr = fopen(input_filename, "r");
-    FILE *output_file_ptr = fopen(output_filename, "r");
+    FILE *input_file_ptr = fopen(input_filename, "rb");
+    FILE *output_file_ptr = fopen(output_filename, "rb");
 
     if (!input_file_ptr) {
         fprintf(stderr, "Error opening input file: %s\n", input_filename);
@@ -96,4 +96,3 @@ void display_file(const char input_filename[],
     fclose(output_file_ptr);
 
 }
-
