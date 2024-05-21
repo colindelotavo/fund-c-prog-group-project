@@ -48,16 +48,27 @@ void exit_program(void);
 
 /******************************************************************************
 
- * Overview of program here
+ * Main program that allows the user to access all relevant functions
+   pertaining to the compression and encryption algorithms. Extra functions
+   to enhance the user experience in terms of transparency with inputs/ouputs,
+   status messages and more have been included.
 
-    gcc -o ../task.out main.c compression.c encryption.c fileio.c -I../include
+ * inputs:
+   - user input with valid options being 1, 2, 3, 4 or 5
+   - other functions such as user_input from fileio.c allow user data to be
+     inserted into input_file.txt
+
+ * outputs:
+   - prints menu options to user
+   - prints relevant error messages
+   - prints prompt for user to enter shift key (if applicable)
 
 ******************************************************************************/
 
 int main(void) {
     
     int choice = 0;
-    int shift_key; /* note in report users would go through all options */
+    int shift_key;
 
     while (choice != 5) {
         print_menu();
@@ -112,6 +123,19 @@ void print_menu(void) {
         "5 - Exit the program\n"
         "Enter your choice> ");
 }
+
+/******************************************************************************
+ 
+ * This function prints an exit/thank you message to indicate the user has
+   successfully exited the program.
+
+ * inputs:
+   - none
+
+ * outputs:
+   - Prints exit/thank you message to user
+
+******************************************************************************/
 
 void exit_program(void) {
     printf("Thanks for learning with us. Have a great day!\n\n");
