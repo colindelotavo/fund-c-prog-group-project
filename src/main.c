@@ -133,7 +133,7 @@ void print_menu(void) {
    - none
 
  * outputs:
-   - Prints exit/thank you message to user
+   - prints exit/thank you message to user
 
 ******************************************************************************/
 
