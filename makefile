@@ -1,32 +1,48 @@
-# Compiler and compiler flags
+# Compiler
 CC = gcc
-CFLAGS = -Wall -Werror -ansi -lm
 
-# Target executable
-TARGET = encryption_program
+# Compiler flags
+CFLAGS = -I../include -Wall -Wextra -Werror
 
-# Source files and object files
-SRCS = main.c caeser_cipher.c run_length.c
-OBJS = $(SRCS:.c=.o)
+# Directories
+SRC_DIR = src
+INCLUDE_DIR = include
+DATA_DIR = data
+BUILD_DIR = build
+
+# Source files
+SRCS = $(SRC_DIR)/main.c \
+       $(SRC_DIR)/compression.c \
+       $(SRC_DIR)/encryption.c \
+       $(SRC_DIR)/fileio.c
+
+# Object files
+OBJS = $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
+
+# Executable
+EXEC = $(BUILD_DIR)/task.out
 
 # Default target
-all: $(TARGET)
+all: $(EXEC)
 
-# Link the program
-$(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+# Build executable
+$(EXEC): $(OBJS)
+	$(CC) -o $(EXEC) $(OBJS) $(CFLAGS)
 
 # Compile source files into object files
-%.o: %.c %.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
+	$(CC) -c $(CFLAGS) $< -o $@
 
-# Rule to handle the main.c which might not have a corresponding header file
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c -o main.o
+# Create build directory if it does not exist
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
-# Clean up
+# Clean build files
 clean:
-	rm -f $(TARGET) $(OBJS)
+	rm -rf $(BUILD_DIR) $(EXEC)
 
-# Phony targets
-.PHONY: all clean
+# Run the program
+run: $(EXEC)
+	$(EXEC)
+
+.PHONY: all clean run
