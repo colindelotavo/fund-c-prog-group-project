@@ -8,7 +8,7 @@
 
  * Group Members: Colin Tria Delotavo and Samarth Kunal Singh
  
- * Date of submission: dd/05/2024
+ * Date of submission: 22/05/2024
 
 ******************************************************************************/
 
@@ -18,14 +18,11 @@
 
 ******************************************************************************/
 
-/* These are the only ones we're allowed to use */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include "../include/compression.h"
-#include "../include/encryption.h"
-#include "../include/fileio.h"
+#include <stdio.h> /* printf, scanf, getchar */
+#include "../include/compression.h" /* compress_file, decompress_file */
+#include "../include/encryption.h" /* encrypt_file, decrypt_file */
+#include "../include/fileio.h" /* user_input, display_file, 
+                                  compare_file_size */
 
 /******************************************************************************
 

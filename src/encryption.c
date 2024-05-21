@@ -7,15 +7,12 @@
 
 /******************************************************************************
 
- * What function does (e.g. using caeser cipher etc)
+ * What function does
 
  * inputs:
-   - a
-   - b
-
+   - x
  * outputs:
    - y
-   - z
 
 ******************************************************************************/
 
@@ -50,15 +47,12 @@ void encrypt_file(const char input_filename[],
 
 /******************************************************************************
 
- * What function does (e.g. using caeser cipher etc)
+ * What function does
 
  * inputs:
-   - a
-   - b
-
+   - x
  * outputs:
    - y
-   - z
 
 ******************************************************************************/
 

@@ -1,20 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include <stdio.h> /* fopen, fprintf, fgets, fgetc, putchar, 
+                      fclose, printf, stderr */
+#include <stdlib.h> /* exit */
+#include <string.h> /* strlen */
 #include "../include/fileio.h"
 
 /******************************************************************************
 
- * What function does (e.g. using caeser cipher etc)
+ * Takes in user input and inserts it into the input_file for further
+   data transformation in tandem with compression and encryption protocols.
+   Replaces rather than appends for clean user input each call.
 
  * inputs:
+   - user input
+   - these allow special cases such as numbers and special chars to be 
+     included
 
  * outputs:
+   - outputs appropriate error messages as needed and successful writes
 
 ******************************************************************************/
-
-/* Loops BEFORE/AFTER after first selection of options 1-4...? */
 
 void user_input(const char input_filename[]) {
     size_t str_length;
@@ -42,21 +46,24 @@ void user_input(const char input_filename[]) {
 
 /******************************************************************************
 
- * What function does (e.g. using caeser cipher etc)
+ * Handles logic to output the Before and After of user inputs for clarity and
+   also for educational purposes
 
  * inputs:
-   - a
-   - b
+   - input_file
+   - output_file
 
  * outputs:
+   - prints to console the contents of the input_file and output_file in
+     the following format
 
     BEFORE
-    -------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------
     <input_file contents>
 
 
     AFTER
-    -------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------
     <output_file contents>
 
 ******************************************************************************/
