@@ -10,6 +10,11 @@
  
  * Date of submission: 22/05/2024
 
+Compiling Instructions:
+1. Stay in top-level directory. Type "make"
+2. Navigate to src directory. Type "cd src"
+3. Execute task.out file. Type "../task.out"
+
 ******************************************************************************/
 
 /******************************************************************************
