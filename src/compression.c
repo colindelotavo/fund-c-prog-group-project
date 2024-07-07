@@ -169,6 +169,7 @@ void compare_file_size(const char input_filename[],
     } else {
         printf("\n\n\nCompression has failed.\n");
         printf("\nTry something RLE-relevant, AAAAABBB for example!");
+        printf("\n*checks are made to see char length before/after");
     }
 
     /* close the input and output files */
